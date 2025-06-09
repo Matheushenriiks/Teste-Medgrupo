@@ -74,12 +74,11 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 55.7rem;
-    gap: 1.6rem;
+    gap: 18rem;
 
     @include mixins.respond(desktop-large) {
       align-items: inherit;
-      height: 67.7rem;
+      gap: 17rem;
     }
   }
 
