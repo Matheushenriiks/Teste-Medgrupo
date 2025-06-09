@@ -1,0 +1,25 @@
+@keyframes fillProgress {
+  0% {
+    width: 0;
+  }
+}
+
+@keyframes appear {
+  0% {
+    transform: translateX(-10px);
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes countUp {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}

@@ -1,27 +1,120 @@
-# MedgrupoTeste
+# MedGrupo Teste
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.0.
+Este é um projeto Angular que implementa uma interface moderna e responsiva para o MedGrupo, utilizando a metodologia BEM (Block Element Modifier) e a arquitetura SCSS 7-1.
 
-## Development server
+## 🚀 Tecnologias
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Angular 17.1.0
+- SCSS com arquitetura 7-1
+- Metodologia BEM
+- RxJS
+- TypeScript
 
-## Code scaffolding
+## 📋 Pré-requisitos
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Node.js (versão LTS recomendada)
+- npm ou yarn
+- Angular CLI
 
-## Build
+## 🔧 Instalação
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+1. Clone o repositório:
 
-## Running unit tests
+```bash
+git clone [URL_DO_REPOSITÓRIO]
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+2. Navegue até o diretório do projeto:
 
-## Running end-to-end tests
+```bash
+cd medgrupo-teste
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+3. Instale as dependências:
 
-## Further help
+```bash
+npm install
+# ou
+yarn install
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## 🚀 Executando o projeto
+
+Para iniciar o servidor de desenvolvimento:
+
+```bash
+npm start
+# ou
+yarn start
+```
+
+O aplicativo estará disponível em `http://localhost:4200/`.
+
+## 🏗️ Estrutura do Projeto
+
+```
+src/
+├── app/
+│   ├── components/     # Componentes reutilizáveis
+│   ├── pages/         # Páginas da aplicação
+│   └── ...
+├── assets/
+│   ├── data/         # Dados estáticos
+│   ├── icon/         # Ícones
+│   └── img/          # Imagens
+└── styles/
+    ├── abstracts/    # Variáveis, mixins, funções
+    ├── base/         # Reset, tipografia, etc
+    └── ...
+```
+
+## 🎨 Arquitetura SCSS 7-1
+
+O projeto segue a arquitetura SCSS 7-1, organizada da seguinte forma:
+
+- `abstracts/`: Variáveis, funções, mixins
+- `base/`: Reset, tipografia, etc
+- `components/`: Componentes específicos
+- `layout/`: Grid, header, footer
+- `pages/`: Estilos específicos de páginas
+
+## 📱 Responsividade
+
+O projeto é totalmente responsivo e inclui breakpoints para:
+
+- Desktop
+- Tablet
+- Mobile
+
+## 🧪 Testes
+
+Para executar os testes:
+
+```bash
+npm test
+# ou
+yarn test
+```
+
+## 🛠️ Scripts Disponíveis
+
+- `npm start`: Inicia o servidor de desenvolvimento
+- `npm build`: Compila o projeto para produção
+- `npm test`: Executa os testes
+- `npm run watch`: Compila o projeto em modo watch
+
+## 🤝 Contribuindo
+
+1. Faça um fork do projeto
+2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
+3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
+4. Push para a branch (`git push origin feature/AmazingFeature`)
+5. Abra um Pull Request
+
+## 👥 Autores
+
+- Matheus Henriques - [matheushenriiks](https://github.com/seu-usuario)
+
+- MedGrupo
+- Angular Team
+- Comunidade BEM

@@ -1,0 +1,95 @@
+@use "../../../styles/abstracts/mixins";
+
+.modal-products {
+  &__overlay {
+    @include mixins.overlay;
+  }
+
+  &__container {
+    @include mixins.center-layout;
+    z-index: 3;
+    width: 88rem;
+    height: 67.2rem;
+    color: var(--med-color-neutral-10);
+    background-color: var(--med-color-neutral-1);
+
+    @include mixins.respond(desktop-large) {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__close {
+    width: 2.4rem;
+    height: 2.4rem;
+    margin: 2.8rem 4rem;
+
+    @include mixins.respond(desktop-large) {
+      width: 2.4rem;
+      height: 2.4rem;
+      margin: 2.4rem 2.4rem;
+    }
+  }
+
+  &__products {
+    margin: 0 6.4rem;
+
+    @include mixins.respond(desktop-large) {
+      margin: 0 2.4rem;
+    }
+  }
+
+  &__title {
+    margin: 4rem 0;
+
+    &--footer {
+      display: inline-block;
+      font-size: 1.6rem;
+      line-height: 1.6rem;
+      margin: 5.6rem 0 0 0;
+      cursor: pointer;
+    }
+
+    @include mixins.respond(desktop-large) {
+      font-size: 2.4rem;
+      margin: 0 0 2.4rem 0;
+
+      &--footer {
+        font-size: 1.6rem;
+        cursor: pointer;
+        margin: 4rem 0 0 0;
+      }
+    }
+    @include mixins.respond(tab-port) {
+      font-size: 1.6rem;
+    }
+  }
+
+  &__item {
+    list-style: none;
+
+    &:not(:last-child) {
+      margin-bottom: 0.8rem;
+    }
+  }
+
+  &__topics {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 8rem;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    background-color: var(--med-color-neutral-15);
+
+    &:hover {
+      border: 0.1rem solid var(--med-color-neutral-10);
+    }
+  }
+
+  &__icon {
+    width: 4.8rem;
+    height: 4.8rem;
+    margin: 1.6rem;
+  }
+}

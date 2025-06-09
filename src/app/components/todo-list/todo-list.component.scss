@@ -1,0 +1,122 @@
+@use "../../../styles/abstracts/mixins";
+
+.todo {
+  &__container {
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 0 2.4rem;
+    border-left: 0.005rem solid var(--med-color-neutral-15);
+    top: 0;
+    bottom: 0;
+    right: -48.2rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 40rem;
+    background-color: var(--med-color-neutral-1);
+    transition: right 0.3s ease;
+
+    &--open {
+      right: 0.1rem;
+    }
+
+    @include mixins.respond(desktop-small) {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      right: 0;
+      margin-bottom: 8rem;
+      transition: none;
+    }
+
+    &::-webkit-scrollbar {
+      width: 1rem;
+      background-color: var(--med-color-neutral-15);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: var(--med-color-brand-4);
+      border-radius: 0.6rem;
+    }
+  }
+
+  &__title {
+    padding: 3.2rem 0 2.4rem 0;
+
+    &--mobile {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      color: var(--med-color-neutral-10);
+    }
+
+    @include mixins.respond(desktop-small) {
+      display: inline;
+      padding: 2.4rem 0;
+    }
+  }
+
+  &__item {
+    display: flex;
+    width: 35.2rem;
+    height: 7.2rem;
+    margin-bottom: 1rem;
+    border-radius: 0.8rem;
+    background-color: var(--med-color-neutral-15);
+
+    @include mixins.respond(desktop-small) {
+      width: 100%;
+    }
+  }
+
+  &__checkbox {
+    width: 2rem;
+    margin: 2.4rem 1.6rem;
+    accent-color: var(--med-color-brand-4);
+  }
+
+  &__task {
+    margin: 1.4rem 0;
+  }
+
+  &__task-title {
+    margin-bottom: 0.4rem;
+  }
+
+  &__icon {
+    position: relative;
+    width: 1.6rem;
+    height: 1.6rem;
+    top: 0.3rem;
+    margin-right: 0.8rem;
+  }
+
+  &__description {
+    color: var(--med-color-neutral-3);
+
+    &--weight {
+      font-weight: 400;
+      margin-left: 0.8rem;
+    }
+  }
+
+  &__toggle {
+    position: fixed;
+    z-index: 1;
+    width: 2.4rem;
+    height: 2.4rem;
+    bottom: 2rem;
+    right: 5.4rem;
+    cursor: pointer;
+    transition: transform 0.3s;
+    transform: rotate(180deg);
+
+    &--rotated {
+      transform: rotate(0deg);
+    }
+    @include mixins.respond(desktop-small) {
+      display: none;
+    }
+  }
+}

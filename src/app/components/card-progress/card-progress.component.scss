@@ -1,0 +1,125 @@
+@use "../../../styles/abstracts/mixins";
+
+.card-progress {
+  animation: appear 2s 1s;
+  animation-fill-mode: backwards;
+
+  @include mixins.respond(desktop-small) {
+    padding-left: 2.4rem;
+  }
+
+  &__container {
+    display: flex;
+    width: 42rem;
+    height: 16rem;
+    border-radius: 0.8rem;
+    background-color: var(--med-color-neutral-15);
+
+    @include mixins.respond(desktop-small) {
+      width: 36.6rem;
+      height: 12rem;
+    }
+
+    @include mixins.respond(tab-large) {
+      width: 28.61rem;
+      height: 12rem;
+    }
+  }
+
+  &__descriptions {
+    margin: 2.4rem 0.8rem 2.4rem 2.4rem;
+
+    @include mixins.respond(desktop-small) {
+      margin: 1.2rem 0 1.2rem 1.6rem;
+    }
+  }
+
+  &__stats {
+    @include mixins.flex-center;
+    gap: 0.8rem;
+
+    @include mixins.respond(desktop-small) {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+  }
+
+  &__label {
+    line-height: 1.6rem;
+  }
+
+  &__icon {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+
+  &__metrics {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__percentage {
+    margin-top: 3.6rem;
+    line-height: 3.2rem;
+
+    @include mixins.respond(desktop-small) {
+      margin-top: 2.4rem;
+    }
+  }
+
+  &__questions {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-top: 1.2rem;
+    line-height: 1.6rem;
+    color: var(--med-color-neutral-6);
+
+    @include mixins.respond(desktop-small) {
+      margin-top: 0.8rem;
+    }
+  }
+
+  &__bars-container {
+    display: flex;
+    flex-direction: column;
+    transform: rotate(270deg);
+    margin-left: 6.6rem;
+
+    @include mixins.respond(desktop-small) {
+      margin-left: 8.79rem;
+    }
+    @include mixins.respond(tab-large) {
+      margin-left: 0.8rem;
+    }
+  }
+
+  &__bar {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 0.8rem;
+    width: 11.2rem;
+    border-radius: 0.4rem;
+    margin: 1.233rem 2.4rem;
+    background: var(--med-color-neutral-2);
+
+    @include mixins.respond(desktop-small) {
+      width: 8.8rem;
+      height: 0.8rem;
+      margin: 0.891rem 1.6rem;
+      border-radius: 0.4rem;
+    }
+  }
+
+  &__done {
+    position: relative;
+    overflow: hidden;
+    width: calc(var(--week) * 1%);
+    height: 2rem;
+    border-radius: 5rem;
+    animation: fillProgress 1.5s ease-out forwards 1.5s;
+    animation-fill-mode: backwards;
+    background-color: var(--med-color-brand-4);
+  }
+}

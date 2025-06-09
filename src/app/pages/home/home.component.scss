@@ -1,0 +1,64 @@
+@use "../../../styles/abstracts/mixins";
+
+.container {
+  display: grid;
+  grid-template-columns: 1.5fr 15.5fr;
+  gap: 18.8rem;
+
+  @include mixins.respond(desktop-medium) {
+    gap: 9.4rem;
+  }
+
+  @include mixins.respond(desktop-small) {
+    display: block;
+  }
+
+  &__hero {
+    @include mixins.respond(desktop-small) {
+      background-color: var(--med-color-neutral-15);
+    }
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+
+    @include mixins.respond(desktop-small) {
+      background-color: var(--med-color-neutral-15);
+    }
+  }
+
+  &__title-hero {
+    padding: 3.2rem 0 2.4rem 0;
+
+    @include mixins.respond(desktop-small) {
+      padding: 2.4rem 0 2.4rem 2.4rem;
+      background-color: var(--med-color-neutral-15);
+    }
+  }
+
+  &__title-parcial {
+    padding: 3.2rem 0 2.4rem 0;
+
+    @include mixins.respond(desktop-small) {
+      padding: 4rem 0 2.4rem 2.4rem;
+    }
+  }
+
+  &__title-footer {
+    line-height: 1.6rem;
+    padding-top: 3.2rem;
+
+    @include mixins.respond(desktop-small) {
+      padding: 2.4rem 0 2.4rem 2.4rem;
+      font-size: 1.4rem;
+    }
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    overflow-x: auto;
+    max-width: max-content;
+  }
+}

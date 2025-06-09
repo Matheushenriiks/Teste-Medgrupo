@@ -1,1 +1,5 @@
-/* You can add global styles to this file, and also import other style files */
+@use "../../medgrupo-teste/src/styles/abstracts/variables-colors";
+@use "../../medgrupo-teste/src/styles/fonts";
+@use "../../medgrupo-teste/src/styles/base/base";
+@use "../../medgrupo-teste/src/styles/base/animations";
+@use "../src/styles/base/typography";

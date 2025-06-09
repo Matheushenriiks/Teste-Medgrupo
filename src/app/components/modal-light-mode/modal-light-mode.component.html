@@ -1,0 +1,50 @@
+<div class="modal-mode" *ngIf="modalService.modalLightMode$ | async">
+  <div class="modal-mode__overlay" (click)="closeModal()"></div>
+  <div class="modal-mode__container">
+    <a href="#" (click)="closeModal()">
+      <img
+        class="modal-mode__close"
+        src="../../../assets/icon/icon-left.png"
+        alt="icone de fechar"
+      />
+      <img
+        class="modal-mode__close-mobile"
+        src="../../../assets/icon/icon-chevron-left.png"
+        alt="x"
+      />
+    </a>
+    <section class="modal-mode__modes">
+      <h2 class="modal-mode__title heading-primary">Modo Claro</h2>
+      <p class="modal-mode__description heading-quaternary">
+        Por enquanto esta funcionalidade está disponível apenas para algumas
+        áreas, em breve estará disponível para todo o aplicativo.
+      </p>
+      <div class="modal-mode__buttons">
+        <div class="modal-mode__button-mode">
+          <div class="modal-mode__button-aplly">
+            <a class="modal-mode__dark" href="#">
+              <img
+                class="modal-mode__icon"
+                src="../../../assets/icon/icon-moon.png"
+                alt="icone de lua"
+              />
+            </a>
+            <span class="heading-tertiary">Modo Escuro</span>
+          </div>
+
+          <div class="modal-mode__button-aplly">
+            <a class="modal-mode__dark" href="#">
+              <img
+                class="modal-mode__icon"
+                src="../../../assets/icon/icon-sun.png"
+                alt="icone de sol"
+              />
+            </a>
+            <span class="heading-tertiary">Modo Claro</span>
+          </div>
+        </div>
+        <button class="modal-mode__button heading-tertiary">Aplicar</button>
+      </div>
+    </section>
+  </div>
+</div>

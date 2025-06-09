@@ -1,0 +1,63 @@
+@use "../../../styles/abstracts/mixins";
+
+.header-mobile {
+  display: none;
+
+  @include mixins.respond(desktop-small) {
+    display: block;
+  }
+
+  &__container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 7.2rem;
+    padding: 0 2.4rem;
+  }
+
+  &__products {
+    @include mixins.flex-center;
+    cursor: pointer;
+  }
+
+  &__toggle-icon {
+    width: 4rem;
+    height: 4rem;
+    margin: 1.6rem 1.6rem 1.6rem 0;
+  }
+
+  &__description {
+    @include mixins.respond(tab-large) {
+      font-size: 1.4rem;
+      font-weight: 600;
+      line-height: 2.4rem;
+    }
+  }
+
+  &__arrow-icon {
+    width: 1.6rem;
+    height: 1.6rem;
+    margin-left: 0.4rem;
+  }
+
+  &__avatar {
+    width: 3.2rem;
+    height: 3.2rem;
+    margin: 2rem 0;
+    border-radius: 5rem;
+    cursor: pointer;
+  }
+
+  &__status {
+    position: absolute;
+    top: 1.6rem;
+    right: 2rem;
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 2rem;
+    border: 0.2rem solid var(--med-color-brand-1);
+    background-color: var(--med-color-brand-4);
+  }
+}

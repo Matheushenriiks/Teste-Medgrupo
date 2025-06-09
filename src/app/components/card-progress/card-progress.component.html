@@ -1,0 +1,29 @@
+<article class="card-progress">
+  <div class="card-progress__container">
+    <section class="card-progress__descriptions">
+      <div class="card-progress__stats">
+        <span class="card-progress__label heading-quaternary">Acertos</span>
+        <img
+          src="../../../assets/icon/icon-interrogation.png"
+          class="card-progress__icon"
+          alt="Ícone de interrogação"
+        />
+      </div>
+      <div class="card-progress__metrics">
+        <span class="card-progress__percentage heading-primary">{{
+          parcial[0].acertos
+        }}</span>
+        <span class="card-progress__questions"
+          >{{ parcial[0].questoes }} questões</span
+        >
+      </div>
+    </section>
+
+    <section class="card-progress__bars-container">
+      <div class="card-progress__bar" *ngFor="let week of parcial[0].weeks">
+        <span class="card-progress__done" [ngStyle]="{ '--week': week }">
+        </span>
+      </div>
+    </section>
+  </div>
+</article>
