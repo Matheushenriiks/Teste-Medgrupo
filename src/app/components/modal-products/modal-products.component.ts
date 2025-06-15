@@ -1,12 +1,5 @@
 import { CommonModule } from '@angular/common';
-import {
-  Component,
-  EventEmitter,
-  Input,
-  OnDestroy,
-  OnInit,
-  Output,
-} from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subject, takeUntil } from 'rxjs';
 import { ModalService } from '../../../assets/services/modal.service';
 
@@ -17,9 +10,8 @@ import { ModalService } from '../../../assets/services/modal.service';
   templateUrl: './modal-products.component.html',
   styleUrl: './modal-products.component.scss',
 })
-export class ModalProductsComponent implements OnInit, OnDestroy {
-  modalIsOpen = false;
-  private destroy$ = new Subject<void>();
+export class ModalProductsComponent {
+  constructor(public modalService: ModalService) {}
 
   products = [
     {
@@ -39,21 +31,59 @@ export class ModalProductsComponent implements OnInit, OnDestroy {
       image: '../../../assets/img/modal-products/logo-cpmed.png',
     },
   ];
-
-  constructor(public modalService: ModalService) {}
-
-  ngOnInit() {
-    this.modalService.modalProducts$
-      .pipe(takeUntil(this.destroy$))
-      .subscribe((open: boolean) => (this.modalIsOpen = open));
-  }
+  // ngOnInit() {
+  //   this.modalService.modalProducts$
+  //     .pipe(takeUntil(this.destroy$))
+  //     .subscribe((open: boolean) => (this.modalIsOpen = open));
+  // }
 
   closeModal() {
     this.modalService.closeProductsModal();
   }
 
-  ngOnDestroy() {
-    this.destroy$.next();
-    this.destroy$.complete();
-  }
+  // ngOnDestroy() {
+  //   this.destroy$.next();
+  //   this.destroy$.complete();
+  // }
 }
+
+// export class ModalProductsComponent implements OnInit, OnDestroy {
+//   modalIsOpen = false;
+//   private destroy$ = new Subject<void>();
+
+//   products = [
+//     {
+//       name: '2022 MEDCURSO',
+//       image: '../../../assets/img/modal-products/logo-medgrupo.png',
+//     },
+//     {
+//       name: '2022 M.E.D',
+//       image: '../../../assets/img/modal-products/logo-med.png',
+//     },
+//     {
+//       name: '2022 RACIPE',
+//       image: '../../../assets/img/modal-products/logo-racipe.png',
+//     },
+//     {
+//       name: '2021 CPMED',
+//       image: '../../../assets/img/modal-products/logo-cpmed.png',
+//     },
+//   ];
+
+//   constructor(public modalService: ModalService) {}
+
+//   ngOnInit() {
+//     this.modalService.modalProducts$
+//       .pipe(takeUntil(this.destroy$))
+//       .subscribe((open: boolean) => (this.modalIsOpen = open));
+//   }
+
+//   closeModal() {
+//     this.modalService.closeProductsModal();
+//   }
+
+//   ngOnDestroy() {
+//     this.destroy$.next();
+//     this.destroy$.complete();
+//   }
+// }

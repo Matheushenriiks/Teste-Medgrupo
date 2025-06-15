@@ -78,7 +78,12 @@
 
     @include mixins.respond(desktop-large) {
       align-items: inherit;
-      gap: 17rem;
+      gap: 24rem;
+    }
+
+    @include mixins.respond(phone) {
+      align-items: inherit;
+      gap: 34rem;
     }
   }
 

@@ -1,11 +1,8 @@
 <div class="modal-products" *ngIf="modalService.modalProducts$ | async">
-  <div
-    class="modal-products__overlay"
-    (click)="modalService.closeProductsModal()"
-  ></div>
+  <div class="modal-products__overlay" (click)="closeModal()"></div>
 
   <div class="modal-products__container">
-    <a (click)="modalService.closeProductsModal()" href="#">
+    <a (click)="closeModal()" href="#">
       <img
         class="modal-products__close"
         src="../../../assets/icon/icon-left.png"
